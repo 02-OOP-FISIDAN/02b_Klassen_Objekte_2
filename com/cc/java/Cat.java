@@ -6,6 +6,7 @@ public class Cat {
   private String furColor;
   private int age;
   private boolean isFemale;
+private int counter;
 
   
   // Constructor:
@@ -38,7 +39,25 @@ public class Cat {
   }
 
   private String checkEscalationLevel() {
-    return "This is an inappropriate question!";
+
+    counter++; //+1
+
+    switch (counter) {
+      case 1:
+      return "This is an inappropriate Question!";
+        case 2:
+        return "I've told you once!";
+        case 3:
+        return "I've told you twice!";
+        case 4:
+        return "Talk to the hand!";
+        case 5:
+        return "1#!*%";
+        default:
+        break;
+      
+    }
+	return furColor;
   }
 }
     
