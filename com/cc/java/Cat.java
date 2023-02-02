@@ -6,11 +6,10 @@ public class Cat {
   private String furColor;
   private int age;
   private boolean isFemale;
-private int counter;
+  private int counter;
 
-  
   // Constructor:
-  
+
   public Cat(String name, String furColor, int age, boolean isFemale) {
     this.name = name;
     this.furColor = furColor;
@@ -18,7 +17,6 @@ private int counter;
     this.isFemale = isFemale;
   }
 
- 
   public String getStringAttributes(String op) {
     switch (op) {
       case "#name":
@@ -41,23 +39,24 @@ private int counter;
   private String checkEscalationLevel() {
 
     counter++; //+1
-
+    if (counter > 3) {
+      counter = 1;
+    }
     switch (counter) {
       case 1:
-      return "This is an inappropriate Question!";
-        case 2:
+        return "This is an inappropriate Question!";
+      case 2:
         return "I've told you once!";
-        case 3:
+      case 3:
         return "I've told you twice!";
-        case 4:
+      case 4:
         return "Talk to the hand!";
-        case 5:
+      case 5:
         return "1#!*%";
-        default:
-        break;
-      
+      default:
+        return "1#!?&&%";
+
     }
-	return furColor;
   }
 }
     
